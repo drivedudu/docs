@@ -8,8 +8,15 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
-
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
 <style type="text/css">
+body {
+
+
+    font-family: 'Quicksand', sans-serif !important;
+
+
+}
   .markdown-section p.warn {
   border-bottom-right-radius: 2px;
   border-left: 4px solid #0086FF;
@@ -17,13 +24,14 @@
   margin: 2em 0;
   padding: 12px 24px 12px 30px;
   position: relative;
+  background:  rgba(12, 134, 237, 0.1);
 }
 .markdown-section p.warn:before {
   background-color: #0086FF;
   border-radius: 100%;
   color: #fff;
   content: 'i';
-  font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Quicksand', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   left: -12px;
@@ -101,23 +109,67 @@ padding-left: 8px;
   background-color: transparent;
 }
 
+ .markdown-section li  {
+    text-decoration: none !important;
+    margin-bottom: 3px;
+  }
+
+.markdown-section li > a {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    color: #006600 !important;
+    font-size: inherit;
+    font-weight: 100 !important;
+  }
+
+ .markdown-section h2 {
+    text-align: center !important;
+ 
+  }
+
+
+  .markdown-section h2 > a > span{
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+.markdown-section ul > li > ul {
+    margin: 10px;
+  }
+  #myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
 </style>
 
 
 </head>
 <body>
+
+
+
   <div id="app">Carregando...</div>
   <script>
     window.$docsify = {
       name: 'Meu Drive',
+      auto2top: true,  
       loadSidebar: true,
       repo: 'drivedudu/docs/',
         themeable: {
            responsiveTables: true
           },
+    search : [
+          '_sidebar', 
 
+    ],
       search: {
-        maxAge: 86400000, // Expiration time, the default one day
+        maxAge: 86,
         placeholder: 'Pesquisar',
         noData: 'Sem Resultados!',
       },
@@ -127,6 +179,24 @@ padding-left: 8px;
   <script src="https://unpkg.com/docsify-themeable"></script>
   <script src="https://unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="https://unpkg.com/docsify/lib/plugins/external-script.min.js"></script>
-  <script src="https://unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script>
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    li = document.getElementsByTagName("li");
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
 </body>
 </html>

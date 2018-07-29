@@ -1,9 +1,4 @@
-
-
-* Menu
-
-  * [Redes](rede.md)
-  * [Regex](regex.md)
-  * [Comandos](comandos.md)
-  * [Linux](linux.md)
-
+- [COMANDOS](#comandos)
+- [REDES](#redes)
+- [REGEX ER = Expressões regulares](#regex-er-express%C3%B5es-regulares)
+- [Metacaracteres](#metacaracteres)
