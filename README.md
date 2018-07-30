@@ -270,6 +270,36 @@ REDES
 ---
 
 
+#### Openvpn server em windows
+
+!> Reinciar após instalação
+
+?> **Caminhos**  
+C:\Arquivos de Programas\OpenVPN\easy-rsa  
+
+>init-config  
+
+?>Para uso de certificados configurar  
+
+`C:\Arquivos de Programas\OpenVPN\easy-rsa\vars.bat`  
+
+?> **Paramentros do vars.bat**  
+set KEY_COUNTRY=US  
+set KEY_PROVINCE=CA  
+set KEY_CITY=SanFrancisco  
+set KEY_ORG=OpenVPN  
+set KEY_EMAIL=mail@host.domain
+
+
+>vars  
+clean-all  
+build-ca  
+
+?> os certificados são localizados em C:\Arquivos de Programas\OpenVPN\easy-rsa\keys
+
+>build-key-server escolher-um-nome-para-servidor
+
+
 #### Obter mac do computador e remoto
 > getmac
 * remoto  
