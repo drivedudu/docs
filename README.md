@@ -273,14 +273,16 @@ REDES
 
 #### Openvpn server em windows
 
-!> Reinciar após instalação
+!> selecionar OpenVPN RSA certificate management scripts na instalação  
+1 Reinciar após instalação  
 
-?> **Caminhos**  
+
+?> 2 executar um cmd no **Caminhos**  
 C:\Arquivos de Programas\OpenVPN\easy-rsa  
 
 >init-config  
 
-?>Para uso de certificados configurar  
+?> 3 Editar os parametros  de vars.bat
 
 `C:\Arquivos de Programas\OpenVPN\easy-rsa\vars.bat`  
 
@@ -294,11 +296,44 @@ set KEY_EMAIL=mail@host.domain
 
 >vars  
 clean-all  
-build-ca  
 
-?> os certificados são localizados em C:\Arquivos de Programas\OpenVPN\easy-rsa\keys
+?> 4 criar certificado mestre
 
->build-key-server escolher-um-nome-para-servidor
+>build-ca  
+
+
+?> 5 gerar chave para servidor
+
+>build-key-server `nome-para-servidor`
+
+?> 6 gerar chave para clientes,
+
+>build-key `nome-do-cliente-usuario`
+
+?> 7 gerar criptografia 
+
+>build-dh
+
+
+?> 8 os certificados são localizados em C:\Arquivos de Programas\OpenVPN\easy-rsa\keys  
+copiar `nome-para-servidor` .crt .key ca.crt dh1024.pem para C:\Arquivos de Programas\OpenVPN\config  
+copiar C:\Arquivos de Programas\OpenVPN\samples\server.ovpn para C:\Arquivos de Programas\OpenVPN\config  
+
+?> 9 Editar as linhas do arquivo server.opvn  
+ca ca.crt  
+cert `server.crt` para nome do servidor no passo 5  
+key `server.key`  para nome do servidor no passo 5  
+* salvar
+* Mudar as mesma linha no arquivos client.ovpn pelo nome gerado no passo 6 e mudar a linha  
+remote ip-fixo-do-servidor 1194
+
+
+<p class="yellow"> solucionar falta de internet ou não acesso aos outros computadores, modificar no servidor vpn  
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters registro IPEnableRouter para 1 
+<p>
+
+
+[fonte](https://community.openvpn.net/openvpn/wiki/Easy_Windows_Guide)
 
 
 #### Obter mac do computador e remoto
