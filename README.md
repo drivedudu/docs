@@ -5,11 +5,11 @@
 
 - [COMANDOS](#comandos)
 - [Converter fat32 para ntfs sem perda de dados](#converter-fat32-para-ntfs-sem-perda-de-dados)
-- [Remover messagem de atualização](#remover-messagem-de-atualiza%C3%A7%C3%A3o)
-- [Super usuario nt/Sistema](#super-usuario-ntsistema)
-- [CMD Criar usuarios e adicionar em grupos](#cmd-criar-usuarios-e-adicionar-em-grupos)
+- [Remover mensagem de atualização](#remover-mensagem-de-atualiza%C3%A7%C3%A3o)
+- [Super usuário nt/Sistema](#super-usu%C3%A1rio-ntsistema)
+- [CMD Criar usuários e adicionar em grupos](#cmd-criar-usu%C3%A1rios-e-adicionar-em-grupos)
 - [CMD executar com outro usuário](#cmd-executar-com-outro-usu%C3%A1rio)
-- [CMD propriedades/relatorios windows](#cmd-propriedadesrelatorios-windows)
+- [CMD propriedades/relatórios windows](#cmd-propriedadesrelat%C3%B3rios-windows)
 - [CMD resultado para clipboard - copia](#cmd-resultado-para-clipboard---copia)
 - [CMD Comandos chave office key](#cmd-comandos-chave-office-key)
 - [CMD  Copiar mantendo as permissões](#cmd-copiar-mantendo-as-permiss%C3%B5es)
@@ -27,7 +27,7 @@
 - [Super ping](#super-ping)
 - [Obter todas os MACs da rede](#obter-todas-os-macs-da-rede)
 - [Obter nome do computador por ip](#obter-nome-do-computador-por-ip)
-- [Descobrir servidor de Email](#descobrir-servidor-de-email)
+- [Descobrir servidor de E-mail](#descobrir-servidor-de-e-mail)
 - [Descobrir DNS servidor de hospedagem](#descobrir-dns-servidor-de-hospedagem)
 - [Saber sessões abertas no computador](#saber-sess%C3%B5es-abertas-no-computador)
 - [Saber em qual Computador Usuário está Logado 6 opções](#saber-em-qual-computador-usu%C3%A1rio-est%C3%A1-logado-6-op%C3%A7%C3%B5es)
@@ -36,10 +36,10 @@
 - [REGEX ER-Expressões regulares](#regex-er-express%C3%B5es-regulares)
 - [Selecionar toda a linha](#selecionar-toda-a-linha)
 - [Toda palavra do inicio da linha](#toda-palavra-do-inicio-da-linha)
-- [Variavél de resultado da seleção do regex](#variav%C3%A9l-de-resultado-da-sele%C3%A7%C3%A3o-do-regex)
-- [Caracter para Nova linha](#caracter-para-nova-linha)
+- [Variável de resultado da seleção do regex](#vari%C3%A1vel-de-resultado-da-sele%C3%A7%C3%A3o-do-regex)
+- [Carácter para Nova linha](#car%C3%A1cter-para-nova-linha)
 - [Resulta em uma linha vazia](#resulta-em-uma-linha-vazia)
-- [Capturar tudo após o Caracter mas não incluí-lo na saída](#capturar-tudo-ap%C3%B3s-o-caracter-mas-n%C3%A3o-inclu%C3%AD-lo-na-sa%C3%ADda)
+- [Capturar tudo após o Carácter mas não incluí-lo na saída](#capturar-tudo-ap%C3%B3s-o-car%C3%A1cter-mas-n%C3%A3o-inclu%C3%AD-lo-na-sa%C3%ADda)
 - [Metacaracteres](#metacaracteres)
 - [Lista simples](#lista-simples)
 - [Lista de negação](#lista-de-nega%C3%A7%C3%A3o)
@@ -63,6 +63,14 @@
 - [Terminar um processo](#terminar-um-processo)
 - [Encontrar processo executando](#encontrar-processo-executando)
 - [Executando via rede e porta](#executando-via-rede-e-porta)
+- [Python 3](#python-3)
+- [Múltiplas linhas](#m%C3%BAltiplas-linhas)
+- [Uso de Parênteses para cálculos](#uso-de-par%C3%AAnteses-para-c%C3%A1lculos)
+- [Divisão](#divis%C3%A3o)
+- [Variável](#vari%C3%A1vel)
+- [Formatar Strings-Formatação posicional simples](#formatar-strings-formata%C3%A7%C3%A3o-posicional-simples)
+- [Loop Laço](#loop-la%C3%A7o)
+- [Contar palavras com Len](#contar-palavras-com-len)
 
 <!-- /MarkdownTOC -->
 
@@ -75,7 +83,7 @@
 ---
 
 
-#### Remover messagem de atualização
+#### Remover mensagem de atualização
 > cd /d "%Windir%\System32"  
 takeown /F MusNotification.exe  
 icacls MusNotification.exe /deny Everyone:(X)  
@@ -99,7 +107,7 @@ rem
 
 
 
-#### Super usuario nt/Sistema
+#### Super usuário nt/Sistema
 
 >psexec -i -s **comando**  
 
@@ -112,7 +120,7 @@ Start-Process -FilePath cmd.exe -Verb Runas -ArgumentList '/k C:\SysinternalsSui
 
 ---
 
-#### CMD Criar usuarios e adicionar em grupos
+#### CMD Criar usuários e adicionar em grupos
 
 >net user **username password** /add
 >net localgroup **grupo usuario** /add
@@ -133,7 +141,7 @@ Start-Process -FilePath cmd.exe -Verb Runas -ArgumentList '/k C:\SysinternalsSui
 
 
 
-#### CMD propriedades/relatorios windows
+#### CMD propriedades/relatórios windows
 
 >systeminfo
 
@@ -282,11 +290,11 @@ C:\Arquivos de Programas\OpenVPN\easy-rsa
 
 >init-config  
 
-?> 3 Editar os parametros  de vars.bat
+?> 3 Editar os parâmetros  de vars.bat
 
 `C:\Arquivos de Programas\OpenVPN\easy-rsa\vars.bat`  
 
-?> **Paramentros do vars.bat**  
+?> **Parâmetros do vars.bat**  
 set KEY_COUNTRY=US  
 set KEY_PROVINCE=CA  
 set KEY_CITY=SanFrancisco  
@@ -334,6 +342,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters registro I
 
 
 [fonte](https://community.openvpn.net/openvpn/wiki/Easy_Windows_Guide)
+[sample](https://www.lisenet.com/2014/openvpn-server-and-client-setup-on-windows/)
 
 
 #### Obter mac do computador e remoto
@@ -359,7 +368,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters registro I
 
 ---
 
-#### Descobrir servidor de Email
+#### Descobrir servidor de E-mail
 >nslookup  -querytype=mx  domain name
 
 ---
@@ -423,7 +432,7 @@ REGEX ER-Expressões regulares
 
 ---
 
-#### Variavél de resultado da seleção do regex
+#### Variável de resultado da seleção do regex
 
 > **$&** ou **\1**
 
@@ -432,7 +441,7 @@ concatenar *lixo* com *( )* então (**$&**) fica (lixo).
 
 ---
 
-#### Caracter para Nova linha
+#### Carácter para Nova linha
 
 > \n
 
@@ -444,7 +453,7 @@ concatenar *lixo* com *( )* então (**$&**) fica (lixo).
 
 ---
 
-#### Capturar tudo após o Caracter mas não incluí-lo na saída
+#### Capturar tudo após o Carácter mas não incluí-lo na saída
 
 ```bash
 (?<=Caracter).*$
@@ -511,7 +520,7 @@ Busca qualquer coisa, fora os componentes listados. ` [^0-9A-Z]` não busca núm
 `*`
 
 ?> **Explicação**   
-Repetirá o caractere anterior em qualquer quantidade de forma seguida, também mostra no resultado que não tiver o caractere anterior.  
+Repetirá o carácter anterior em qualquer quantidade de forma seguida, também mostra no resultado que não tiver o caractere anterior.  
 A expressão `#-*[a-zA-Z]` (# seguido de - seguido de letra) resultaria:  
 
 | Lista | Resultado | Dica |
@@ -529,7 +538,7 @@ A expressão `#-*[a-zA-Z]` (# seguido de - seguido de letra) resultaria:
 `+`
 
 ?>?> **Explicação**  
-Repetirá o caractere anterior em qualquer quantidade de forma seguida e só mostra resultados que conter o caractere anterior.  
+Repetirá o carácter anterior em qualquer quantidade de forma seguida e só mostra resultados que conter o caractere anterior.  
 A expressão `#-+[a-zA-Z]` (# seguido de - seguido de letra) resultaria:  
 
 Seguindo exemplo anterior. 
@@ -555,7 +564,7 @@ A expressão `Resul.*` selecionaria toda a linha de cima.
 
 #### Chaves
 
-`{minímo,máximo}`
+`{mínimo,máximo}`
 
 ?> **Explicação**  
 Funciona de min até max vezes, como 1{1,3} resultado 1, 11 e 111.
@@ -563,7 +572,7 @@ Funciona de min até max vezes, como 1{1,3} resultado 1, 11 e 111.
 | Tipos | Descrição |
 |:-----:|:----------|
 | {1,6} | de 1 a 6 |
-| {6,}	|minímo 6 (6 ou mais) |
+| {6,}	|mínimo 6 (6 ou mais) |
 | {0,6}	|até 6 |
 | {6}	|exatamente 6 |
 | {1}	|exatamente 1 |
@@ -579,7 +588,7 @@ Funciona de min até max vezes, como 1{1,3} resultado 1, 11 e 111.
 
 ?> **Explicação**  
 Serve para procurar caracteres no começo da linha. Marcador só é especial se estiver no começo da expressão.
-Resulta em tudo que começar com letrar `^[a-z]` no inicío da linha.  
+Resulta em tudo que começar com letra `^[a-z]` no início da linha.  
 Resulta em tudo que contiver letras,^, letras `[a-z]^[a-z]`
 
 ---
@@ -609,7 +618,7 @@ O \B é a versão negativa.
 `\`
 
 ?> **Explicação**  
-Transforma um caracter especial em literal  ` \.  \[   \]  \?  \+  \{  \} \^  \$ \\ `
+Transforma um carácter especial em literal  ` \.  \[   \]  \?  \+  \{  \} \^  \$ \\ `
 
 ---
 
@@ -629,14 +638,14 @@ Procurar pelo texto literal cat ou dog. `Cat|Dog`
 
 ?> **Explicação**  
 Ao colocar parte de uma expressão regular entre parênteses, você pode agrupar essa parte da expressão regular. Isso permite aplicar um quantificador ao grupo inteiro ou restringir a alternância a parte do regex.
-Apenas parênteses podem ser usados ​​para agrupamento. Colchetes definem uma classe de caractere e chaves são usadas por um quantificador com limites específicos.  
+Apenas parênteses podem ser usados ​​para agrupamento. Colchetes definem uma classe de caracteres e chaves são usadas por um quantificador com limites específicos.  
 Exemplos  
 `Set(SetValue)?` corresponde a Set ou SetValue.  
 `(\.[0-9]){3}`    	.0.6.2, .2.8.9,  
 `(www\.)?cade\.com` 	www.cade.com, cade.com  
 `boa-(tarde|noite)`	boa-tarde, boa-noite  
 `(in|con)?certo` 	incerto, concerto, certo  
-`(mini|(su|hi)per)?mercado` minimercador, supermercado, hipermercado, mercado.
+`(mini|(su|hi)per)?mercado` minimercado, supermercado, hipermercado, mercado.
 
 ---
 
@@ -659,7 +668,7 @@ Resultando  <B> <I> negrito itálico </I> </B>.
 
 ?> **Explicação**  
  Precisa acrescentar uma interrogação logo após os quantificadores normais.  pois pesquisa no menor resultado possível.
-então só busca se o caractere não estiver precisando.
+então só busca se o carácter não estiver precisando.
  
 |e.g 	 | resultado | |e.g|resultado sem ? |
 |:------:|:---------:| |:--:|:--------------:|
@@ -724,10 +733,10 @@ Um barra-LETRA é a negação de um barra-letra.
 |:-----:|:---:|
 |	(?#texto)	|	 comentário (?#seu nome)pokemon	|
 |	(?:ER)	|	um grupo normal () que não é incluído na contagem de grupos, ou seja, não é acessível com retrovisores ou $1 ^(Homer) `(?:J\.)` (Simpson) é o nome completo, mas \1 e \2 contém Homer e Simpson, respectivamente.	|
-|	(?=ER)	|	 Homer (?=Simpson) só busca o Homer se for seguido de Simpson. Mas o sobrenome não faz parte do resulado. serviu apenas para checagem.	|
+|	(?=ER)	|	 Homer (?=Simpson) só busca o Homer se for seguido de Simpson. Mas o sobrenome não faz parte do resultado. serviu apenas para checagem.	|
 |	(?!ER)	|	só busca um trecho se este não for seguido da ER embutida. Então Homer (?!morreu) busca Homer comeu, mas não do Homer morreu.	|
-|	(?<=ER)	|	(? <=a)b (lookbehind positivo) corresponde ao b se somente ao b for segido de a como cabine, mas não corresponde ao cebola.	|
-|	(?<!ER)	|	é a negativa. então se (?<!a)b somente difirente de A mas seguido de B, como cebola. O comprimento deve ser limitado	|
+|	(?<=ER)	|	(? <=a)b (lookbehind positivo) corresponde ao b se somente ao b for seguido de a como cabine, mas não corresponde ao cebola.	|
+|	(?<!ER)	|	é a negativa. então se (?<!a)b somente diferente de A mas seguido de B, como cebola. O comprimento deve ser limitado	|
 
 ---
 
@@ -772,6 +781,32 @@ LINUX
 >sudo netstat -plnt
 
 ---
+
+
+
+===============================================================================================================================================
+#### Python 3
+
+#### Múltiplas linhas
+?> """ 3 aspas para múltiplas linhas igual pre de HTML """
+
+#### Uso de Parênteses para cálculos
+?> Parênteses para cálculos de complexos (((5-5) * 4) / 8)
+
+#### Divisão
+?> Para divisão com resultado inteiro se usa duas barras `(9\\5)` , uma barra para decimal `(9\5)` e % para obter o resto `(9%5)`. 
+
+#### Variável
+?> Variável são case sensitivo Letra e letra são diferentes.
+
+#### Formatar Strings-Formatação posicional simples
+?> Usar o format() exemplo print ( " número {0} letra {1} outro dado {2} " .format(43, "ola" , 23)) segue a ordem {} pela quantidade de dados dentro do format igual o uso de apelidos para SQL.
+
+#### Loop Laço
+?> Sintaxe for i in range(1,20): Porém apenas conta até 19. 
+
+#### Contar palavras com Len
+?> len(string) conta quantos caracteres tem a palavra. Poder ser usado com no range(0, len(string)):
 
 
 
