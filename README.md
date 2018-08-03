@@ -791,7 +791,7 @@ LINUX
 ?> """ 3 aspas para múltiplas linhas igual pre de HTML """
 
 #### Uso de Parênteses para cálculos
-?> Parênteses para cálculos de complexos (((5-5) * 4) / 8)
+?> Parênteses para cálculos de complexos `(((5-5) * 4) / 8)`
 
 #### Divisão
 ?> Para divisão com resultado inteiro se usa duas barras `(9\\5)` , uma barra para decimal `(9\5)` e % para obter o resto `(9%5)`. 
@@ -800,13 +800,13 @@ LINUX
 ?> Variável são case sensitivo Letra e letra são diferentes.
 
 #### Formatar Strings-Formatação posicional simples
-?> Usar o format() exemplo print ( " número {0} letra {1} outro dado {2} " .format(43, "ola" , 23)) segue a ordem {} pela quantidade de dados dentro do format igual o uso de apelidos para SQL.
+?> Usar o format() exemplo `print ( " número {0} letra {1} outro dado {2} " .format(43, "ola" , 23))` segue a sequência {} dos dados dentro do format igual o uso de apelidos para SQL.
 
 #### Loop Laço
-?> Sintaxe for i in range(1,20): Porém apenas conta até 19. 
+?> Sintaxe `for i in range(1,20):` Porém apenas conta até 19. 
 
 #### Contar palavras com Len
-?> len(string) conta quantos caracteres tem a palavra. Poder ser usado com no range(0, len(string)):
+?> `len(string)` conta quantos caracteres tem a palavra. Poder ser usado com no range(0, len(string)):
 
 
 
